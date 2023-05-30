@@ -43,20 +43,39 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Noto Sans", sans-serif;
 }
 
-.password-div input:focus ~ label {
+.email-div label {
+  position: absolute;
+  right: 238px;
+  bottom: 193px;
+  color: gray;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.email-div input:focus ~ label,
+.email-div input:valid ~ label {
   transform: translateY(-20px);
   font-size: 15px;
   color: #252422;
 }
+
 .password-div label {
   position: absolute;
-  right: 200px;
-  bottom: 145px;
+  right: 210px;
+  bottom: 135px;
   color: grey;
   pointer-events: none;
   transition: all 0.3s ease;
+}
+
+.password-div input:focus ~ label,
+.password-div input:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 15px;
+  color: #252422;
 }
 
 .login-btn {

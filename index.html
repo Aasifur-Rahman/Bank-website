@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <title>Panda Bank</title>
 </head>
 <body>
@@ -20,11 +21,12 @@
     
                <div class="p-3">
                 <h1 class="text-4xl text-center mt-6">Welcome To <span class="custom-color">Panda Bank</span></h1>
-                <h3 class="text-2xl mb-4 mt-6 text-center">Please <span class="custom-color">Login</span><h3>
+                <h3 class="text-2xl mb-4 mt-6 text-center">Login<h3>
                     <div class="input-field text-sm griding">
-                        <div>
+                        <div class="email-div mt-3">
                             <i class="fa fa-user" aria-hidden="true"></i> 
-                              <input id="user-email" class=" mb-4 p-1 mail-input " type="email" placeholder="Your Email Address">
+                              <input id="user-email" class=" mb-4 p-1 mail-input " type="text" required>
+                              <label>Email</label>
                         </div>
                         
                         <div class="password-div mt-3"><i class="fa fa-key " aria-hidden="true"></i> 
