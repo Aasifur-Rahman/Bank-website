@@ -5,8 +5,7 @@ nav {
 }
 
 .menu {
-  /* Add this class to hide the menu initially */
-  display: none;
+  display: block;
 }
 
 .menu-toggle {
