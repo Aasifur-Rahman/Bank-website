@@ -4,8 +4,21 @@ nav {
   padding: 10px;
 }
 
-.menu {
-  display: block;
+.navbar {
+  display: flex;
+  flex-direction: column;
+}
+
+.fullbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logout-btn {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .menu-toggle {
@@ -18,6 +31,7 @@ nav {
 }
 
 .menu {
+  display: inline;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -34,12 +48,33 @@ nav {
 }
 
 @media (max-width: 768px) {
+  .fullbar {
+    display: block;
+  }
+
   .menu-toggle {
     display: block;
   }
 
+  .btn {
+    display: none;
+  }
+
+  .btn button {
+    margin: 0px;
+  }
+
+  .btn.logout {
+    display: block;
+    animation: slideIn 0.3s ease-in-out forwards;
+  }
+
   .menu {
     display: none;
+  }
+
+  .menu li {
+    margin: 0px;
   }
 
   .menu.show {
@@ -57,6 +92,11 @@ nav {
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  .logout-btn {
+    display: block;
+    margin-bottom: 10px;
   }
 
   .menu li {
