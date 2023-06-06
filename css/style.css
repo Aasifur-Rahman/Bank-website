@@ -1,98 +1,114 @@
 body {
-  margin: 0;
-  padding: 0;
   background-color: #fffcf2;
 }
 
-.login-container {
+nav {
+  background-color: #252422;
+  color: #fffcf2;
+  padding: 10px;
+}
+
+.navbar {
   display: flex;
+  flex-direction: column;
 }
 
-.img-panda {
-  border-radius: 15px 0px 0px 15px;
+.fullbar {
+  display: flex;
+  justify-content: space-between;
 }
 
-.opening-sec {
-  width: 700px;
-  padding-right: 20px;
-  color: #252422;
-  background-color: #ccc5b9;
-  backdrop-filter: blur(25px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 1px 1px 20px #403d3949;
-  margin-bottom: 100px;
+.logout-btn {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
-.opening-sec h1,
-h3 {
-  color: rgb(66, 66, 66);
+
+.menu-toggle {
+  display: none;
+  background-color: transparent;
+  color: #fffcf2;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.menu {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.menu li a {
+  color: #fffcf2;
+  text-decoration: none;
 }
 
 .custom-color {
-  color: #eb5e28;
+  color: #fb5f28;
 }
 
-input {
-  outline: none;
-  background-color: #ccc5b9;
-  font-size: 15px;
-  border-bottom: 2px solid #252422;
-}
+@media (max-width: 768px) {
+  .fullbar {
+    display: block;
+  }
 
-.input-field {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: "Noto Sans", sans-serif;
-}
+  .menu-toggle {
+    display: block;
+  }
 
-.email-div label {
-  position: absolute;
-  right: 238px;
-  bottom: 193px;
-  color: gray;
-  pointer-events: none;
-  transition: all 0.3s ease;
-}
+  .btn {
+    display: none;
+  }
 
-.email-div input:focus ~ label,
-.email-div input:valid ~ label {
-  transform: translateY(-20px);
-  font-size: 15px;
-  color: #252422;
-}
+  .btn button {
+    margin: 0px;
+  }
 
-.password-div label {
-  position: absolute;
-  right: 210px;
-  bottom: 135px;
-  color: grey;
-  pointer-events: none;
-  transition: all 0.3s ease;
-}
+  .btn.logout {
+    display: block;
+    animation: slideIn 0.3s ease-in-out forwards;
+  }
 
-.password-div input:focus ~ label,
-.password-div input:valid ~ label {
-  transform: translateY(-20px);
-  font-size: 15px;
-  color: #252422;
-}
+  .menu {
+    display: none;
+  }
 
-.login-btn {
-  display: flex;
-  font-size: 15px;
-  background-color: #fffcf2;
-  border-radius: 7px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding-left: 12px;
-  padding-right: 12px;
-  color: #eb5e28;
-}
+  .menu li {
+    margin: 0px;
+  }
 
-.login-btn:hover {
-  background-color: #eb5e28;
-  color: #fffcf2;
-  transition: 1s;
-  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  .menu.show {
+    display: block;
+    animation: slideIn 0.3s ease-in-out forwards;
+  }
+
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .logout-btn {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .menu li {
+    display: block;
+    margin-bottom: 10px;
+  }
 }

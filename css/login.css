@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fffcf2;
+}
+
+.login-container {
+  display: flex;
+}
+
+.img-panda {
+  border-radius: 15px 0px 0px 15px;
+}
+
+.opening-sec {
+  width: 700px;
+  padding-right: 20px;
+  color: #252422;
+  background-color: #ccc5b9;
+  backdrop-filter: blur(25px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 1px 1px 20px #403d3949;
+  margin-bottom: 100px;
+}
+.opening-sec h1,
+h3 {
+  color: rgb(66, 66, 66);
+}
+
+.custom-color {
+  color: #eb5e28;
+}
+
+input {
+  outline: none;
+  background-color: #ccc5b9;
+  font-size: 15px;
+  border-bottom: 2px solid #252422;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.email-div label {
+  position: absolute;
+  right: 238px;
+  bottom: 193px;
+  color: gray;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.email-div input:focus ~ label,
+.email-div input:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 15px;
+  color: #252422;
+}
+
+.password-div label {
+  position: absolute;
+  right: 210px;
+  bottom: 135px;
+  color: grey;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.password-div input:focus ~ label,
+.password-div input:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 15px;
+  color: #252422;
+}
+
+.login-btn {
+  display: flex;
+  font-size: 15px;
+  background-color: #fffcf2;
+  border-radius: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 12px;
+  padding-right: 12px;
+  color: #eb5e28;
+}
+
+.login-btn:hover {
+  background-color: #eb5e28;
+  color: #fffcf2;
+  transition: 1s;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}

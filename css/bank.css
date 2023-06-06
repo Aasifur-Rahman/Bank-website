@@ -1,6 +1,10 @@
+body {
+  background-color: #fffcf2;
+}
+
 nav {
-  background-color: #333;
-  color: #fff;
+  background-color: #252422;
+  color: #fffcf2;
   padding: 10px;
 }
 
@@ -24,7 +28,7 @@ nav {
 .menu-toggle {
   display: none;
   background-color: transparent;
-  color: #fff;
+  color: #fffcf2;
   border: none;
   font-size: 20px;
   cursor: pointer;
@@ -43,8 +47,12 @@ nav {
 }
 
 .menu li a {
-  color: #fff;
+  color: #fffcf2;
   text-decoration: none;
+}
+
+.custom-color {
+  color: #fb5f28;
 }
 
 @media (max-width: 768px) {
